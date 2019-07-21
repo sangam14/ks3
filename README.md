@@ -38,6 +38,9 @@ root@raspberrypi:~#
 root@raspberrypi:~# sudo k3s kubectl get node -o wide
 NAME          STATUS   ROLES    AGE     VERSION         INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION   CONTAINER-RUNTIME
 raspberrypi   Ready    master   2m13s   v1.14.4-k3s.1   192.168.2.18   <none>        Raspbian GNU/Linux 9 (stretch)   4.19.42-v7+      containerd://1.2.7-k3s1
+root@raspberrypi:~# k3s kubectl get nodes
+NAME          STATUS   ROLES    AGE     VERSION
+raspberrypi   Ready    master   3m27s   v1.14.4-k3s.1
 root@raspberrypi:~# 
 
 
