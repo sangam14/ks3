@@ -35,6 +35,10 @@ root@raspberrypi:~#  curl -sfL https://get.k3s.io | sh -
 Created symlink /etc/systemd/system/multi-user.target.wants/k3s.service → /etc/systemd/system/k3s.service.
 [INFO]  systemd: Starting k3s
 root@raspberrypi:~# 
+root@raspberrypi:~# sudo k3s kubectl get node -o wide
+NAME          STATUS   ROLES    AGE     VERSION         INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION   CONTAINER-RUNTIME
+raspberrypi   Ready    master   2m13s   v1.14.4-k3s.1   192.168.2.18   <none>        Raspbian GNU/Linux 9 (stretch)   4.19.42-v7+      containerd://1.2.7-k3s1
+root@raspberrypi:~# 
 
 
 ```
