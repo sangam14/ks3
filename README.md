@@ -17,5 +17,24 @@ root@raspberrypi:~# echo "cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=mem
 root@raspberrypi:~# cat /boot/cmdline.txt
 dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=PARTUUID=c93e37e6-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
+
+root@raspberrypi:~#  curl -sfL https://get.k3s.io | sh -
+[INFO]  Finding latest release
+[INFO]  Using v0.7.0 as release
+[INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v0.7.0/sha256sum-arm.txt
+[INFO]  Downloading binary https://github.com/rancher/k3s/releases/download/v0.7.0/k3s-armhf
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unit
+Created symlink /etc/systemd/system/multi-user.target.wants/k3s.service → /etc/systemd/system/k3s.service.
+[INFO]  systemd: Starting k3s
 root@raspberrypi:~# 
+
+
 ```
