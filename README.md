@@ -41,7 +41,14 @@ raspberrypi   Ready    master   2m13s   v1.14.4-k3s.1   192.168.2.18   <none>   
 root@raspberrypi:~# k3s kubectl get nodes
 NAME          STATUS   ROLES    AGE     VERSION
 raspberrypi   Ready    master   3m27s   v1.14.4-k3s.1
+
+root@raspberrypi:~# k3s kubectl run mynginx --image=nginx --replicas=3 --port=80
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/mynginx created
 root@raspberrypi:~# 
+
+
+
 
 
 ```
